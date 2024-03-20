@@ -23,3 +23,8 @@ void DwgLine::SetData(QPoint p1, QPoint p2)
     mStartPt = p1;
     mEndPt = p2;
 }
+
+
+void DwgLine::Select(QPoint pt)
+{
+}

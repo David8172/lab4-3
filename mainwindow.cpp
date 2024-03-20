@@ -20,6 +20,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionLine_triggered()
 {
     mCurDrawType = DLine;
+    mCurModifyType = MNone;
+    setCursor(Qt::CrossCursor);
 }
 
 QPoint temppt;
@@ -63,6 +65,14 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         }
 
     }
+    if(mCurModifyType & MSelect)
+    {
+        for(auto i : mMainVec)
+        {
+            i->Select(event->pos());
+        }
+        update();
+    }
 }
 
 void MainWindow::paintEvent(QPaintEvent *event)
@@ -78,11 +88,21 @@ void MainWindow::paintEvent(QPaintEvent *event)
 void MainWindow::on_actionCircle_triggered()
 {
     mCurDrawType = DCircle;
+    mCurModifyType = MNone;
+    setCursor(Qt::CrossCursor);
 }
 
 
 void MainWindow::on_actionExit_triggered()
 {
     this->close();
+}
+
+
+void MainWindow::on_actionSelect_triggered()
+{
+    mCurModifyType = MSelect;
+    mCurDrawType = DNone;
+    setCursor(Qt::SizeAllCursor);
 }
 

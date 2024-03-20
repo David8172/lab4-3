@@ -17,6 +17,10 @@ private:
 public:
     virtual void Draw(QPainter *painter);
     virtual void SetData(QPoint p1, QPoint p2);
+
+    // DwgObject interface
+public:
+    virtual void Select(QPoint pt);
 };
 
 #endif // DWGCIRCLE_H

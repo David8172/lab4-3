@@ -22,6 +22,10 @@ private:
     // DwgObject interface
 public:
     virtual void SetData(QPoint p1, QPoint p2);
+
+    // DwgObject interface
+public:
+    virtual void Select(QPoint pt);
 };
 
 #endif // DWGLINE_H

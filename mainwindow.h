@@ -14,6 +14,12 @@ enum DrawType {
     DCircle,
     DRectangle
 };
+enum ModifyType{
+    MNone,
+    MSelect,
+    MDelete
+
+};
 
 class MainWindow : public QMainWindow
 {
@@ -24,6 +30,7 @@ public:
     ~MainWindow();
 
     DrawType mCurDrawType = DNone;
+    ModifyType mCurModifyType = MNone;
 
     QVector<DwgObject *> mMainVec;
 
@@ -33,6 +40,8 @@ private slots:
     void on_actionCircle_triggered();
 
     void on_actionExit_triggered();
+
+    void on_actionSelect_triggered();
 
 private:
     Ui::MainWindow *ui;
