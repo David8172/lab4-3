@@ -30,7 +30,21 @@
     <addaction name="actionLine"/>
     <addaction name="actionCircle"/>
    </widget>
+   <widget class="QMenu" name="menuModify">
+    <property name="title">
+     <string>Modify</string>
+    </property>
+    <addaction name="actionSelect"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
    <addaction name="menuDraw"/>
+   <addaction name="menuModify"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLine">
@@ -41,6 +55,16 @@
   <action name="actionCircle">
    <property name="text">
     <string>Circle</string>
+   </property>
+  </action>
+  <action name="actionSelect">
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
    </property>
   </action>
  </widget>

@@ -80,3 +80,9 @@ void MainWindow::on_actionCircle_triggered()
     mCurDrawType = DCircle;
 }
 
+
+void MainWindow::on_actionExit_triggered()
+{
+    this->close();
+}
+

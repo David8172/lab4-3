@@ -32,6 +32,8 @@ private slots:
 
     void on_actionCircle_triggered();
 
+    void on_actionExit_triggered();
+
 private:
     Ui::MainWindow *ui;
 
